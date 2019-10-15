@@ -1,0 +1,10 @@
+I DID THE SATURATION EXTRA CREDIT. YOU JUST HAVE TO USE -sat TO ACTIVATE IT 
+For this movielab i am able to create a movie from an image, and a movie from a movie.
+The image to import is HSSOE.ppm and for the movie you can use any of the 3 movies we 
+linked to our folders (e.g. mouse.yuv, hue.yuv, reverse.yuv). I also included the
+saturation filter for the image to movie. The way you activate the saturation filter is 
+to write "-sat" instead of "-hue" for the filter. The way you activate the filters for
+movie to movie in my program is either "-reverse" to make it go backwards, or "-fast"
+to speed up the move in which it will prompt the user on how fast they want it to go. 
+The user can then input an int such as "2" to make it go twice as fast or "10," for 
+example to make it go 10 times as fast.

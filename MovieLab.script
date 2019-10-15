@@ -1,0 +1,43 @@
+Script started on Fri 07 Dec 2018 11:58:20 PM PST
+]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ exit./MovieLab -i HSSOE.ppm -i huetest.yuv -start= 0 -en d= 5 -step= 0.5 -hue[A[26Gmake all[K[77G d[K[A[34G
+gcc -ansi -std=c99 -Wall -c MovieLab.c -o MovieLab.o
+gcc -ansi -std=c99 -Wall -c MovieIO.c -o MovieIO.o
+gcc -ansi -std=c99 -Wall -c Movie.c -o Movie.o
+gcc -ansi -std=c99 -Wall -c IterativeFilter.c -o IterativeFilter.o
+gcc -ansi -std=c99 -Wall -c DIPs.c -o DIPs.o
+gcc -ansi -std=c99 -Wall -c FileIO.c -o FileIO.o
+gcc -ansi -std=c99 -Wall -c Image.c -o Image.o
+gcc -ansi -std=c99 -Wall -c ImageList.c -o ImageList.o
+gcc -Wall MovieLab.o MovieIO.o Movie.o IterativeFilter.o DIPs.o FileIO.o Image.o ImageList.o  -lm -o MovieLab
+]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ make all[26Gexit[K./MovieLab -i HSSOE.ppm -i huetest.yuv -start= 0 -en d= 5 -step= 0.5 -hue[A[26Gvim Movie.c[K[77G d[K[A[37G[26G./MovieLab -i HSSOE.ppm -i huetest.yuv -start= 0 -en d= 5 -step= 0.5 -hue[A[77G[P[77Gdd[P[A[51G[77G[51G[1@o[77Gn=[1@d[A[52G[77Gnd
+The movie file huetest.yuv has been written successfully!
+10 frames are written to the file huetest.yuv in total.
+]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ ./MovieLab -m hue.yuv -o reversetest.yuv -f 73 -s 30 0x200 -reverse
+The movie file hue.yuv has been read successfully!
+Reverse!
+Reverse operation is done!
+The movie file reversetest.yuv has been written successfully!
+73 frames are written to the file reversetest.yuv in total.
+]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ ./MovieLab -m hue.yuv -o reversetest.yuv -f 73 -s 30 0x200 -reverse[A[38Gi HSSOE.ppm -o huetest.yuv -start= 0 -en0d= 5 -step= 0.5 -hue[A[26Gmake all[K[77G d[K[A[34G[26G./MovieLab -i HSSOE.ppm -o huetest.yuv -start= 0 -en d= 5 -step= 0.5 -hue[A[77G[P[77Gdd[P[A[55G[P[77G==[P[A[54G[P[77G  [P[A[53G[1@s[77G=5[1@ [A[54G[77G[54G[1@a[77Gd [1@=[A[55G[77G[56G[1@t[77Gn=[1@d[A[56G[38Gm hue.yuv -o reversetest.yuv -f 73 -s 30d0x200 -reverse[K[A[38Gi HSSOE.ppm -o huetest.yuv -start= 0 -en0d= 5 -step= 0.5 -hue[A[77G[P[77Gdd[P[A[55G[P[77G==[P[A[54G[P[77G  [P[A[53G[1@s[77G=5[1@ [A[54G[77G[54G[1@a[77Gd [1@=[A[55G[77G[56G[1@t[77Gn=[1@d[A[56Gtest.yuv -start= 0 -endd= 5 -step= 0.5 -hue[K[K[Ksat
+The movie file sattest.yuv has been written successfully!
+10 frames are written to the file sattest.yuv in total.
+]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ ls
+Constants.h  [0m[01;35mHSSOE.ppm[0m    ImageList.o        Movie.c     MovieLab.o
+DIPs.c       [01;35mhuetest.yuv[0m  Image.o            Movie.h     Movie.o
+DIPs.h       [01;36mhue.yuv[0m      IterativeFilter.c  MovieIO.c   [01;35mreversetest.yuv[0m
+DIPs.o       Image.c      IterativeFilter.h  MovieIO.h   [01;36mreverse.yuv[0m
+FileIO.c     Image.h      IterativeFilter.o  MovieIO.o   [01;35msattest.yuv[0m
+FileIO.h     ImageList.c  Makefile           [01;32mMovieLab[0m    typescript
+FileIO.o     ImageList.h  [01;36mmouse.yuv[0m          MovieLab.c
+[m]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ clean[K[K[K[K[Kmake a[Kclean
+rm -f *.o *.a MovieLab  `find . -name '*.yuv' ! -name 'mouse.yuv' ! -name 'hue.yuv' ! -name 'reverse.yuv'`
+]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ ls
+Constants.h  [0m[01;35mHSSOE.ppm[0m    ImageList.h        Movie.c     [01;36mreverse.yuv[0m
+DIPs.c       [01;36mhue.yuv[0m      IterativeFilter.c  Movie.h     typescript
+DIPs.h       Image.c      IterativeFilter.h  MovieIO.c
+FileIO.c     Image.h      Makefile           MovieIO.h
+FileIO.h     ImageList.c  [01;36mmouse.yuv[0m          MovieLab.c
+[m]0;dfchavar@laguna:~/hw5[dfchavar@laguna ~/hw5]$ exit
+exit
+
+Script done on Sat 08 Dec 2018 12:00:15 AM PST
